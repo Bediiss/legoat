@@ -1,5 +1,5 @@
 function sayHello() {
     const output = document.getElementById("output");
-    output.textContent = "bahri is black";
+    output.textContent = "bahri bich yanjah eyji majeur";
   }
   
