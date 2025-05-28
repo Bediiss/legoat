@@ -2,26 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.5" />
-  <title>My Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bahri Page</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
 </head>
 <body>
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>lebron le goat</p>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="menu" id="menu">
+      <ul>
+        <li><a href="#" onclick="sayHello()">Main</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
+    <h1>Welcome to Bahri's Page</h1>
     <button onclick="sayHello()">Click Me</button>
+
     <p id="output"></p>
   </main>
 
   <footer>
-    <p>© 2025 My Name. All rights reserved.</p>
+    &copy; 2025 Bahri All Rights Reserved
   </footer>
 
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
+  <script>
+    function sayHello() {
+      const output = document.getElementById("output");
+      output.textContent = "bahri bich yanjah eyji majeur";
+    }
+
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    toggle.addEventListener('click', () => {
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    });
+  </script>
 </body>
 </html>
